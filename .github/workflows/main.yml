@@ -20,6 +20,8 @@ jobs:
     name: "Terraform (${{ github.event.inputs.action }})"
     # Use GitHub-hosted Ubuntu runner
     runs-on: ubuntu-latest
+    env:
+      TF_VAR_aws_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
 
     steps:
       # Pull the repo so Terraform files are available

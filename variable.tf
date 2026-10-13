@@ -4,3 +4,8 @@ variable "instance_type" {
   description = "Instance type for the EC2 instance"
   default     = "t2.micro"  # Default to t2.micro if no value is provided
 }
+
+variable "aws_key" {
+  type      = string
+  sensitive = true   
+}
